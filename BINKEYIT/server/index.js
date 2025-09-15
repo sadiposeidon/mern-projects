@@ -20,7 +20,8 @@ app.use(express.json()); // JSON formatında gələn sorğuları avtomatik parse
 app.use(cookieParser()); // Cookie-ləri oxuyur və req.cookies obyektinə əlavə edir
 app.use(morgan()); // HTTP sorğularını log edir (standart formatda)
 
-// Helmet təhlükəsizlik başlıqlarını əlavə edir, bəzi resursların başqa domenlərdən istifadə olunmasına icazə verir
+// Helmet təhlükəsizlik başlıqlarını əlavə edir 
+// Bəzi resursların başqa domenlərdən istifadə olunmasına icazə verir
 app.use(helmet({
     crossOriginResourcePolicy: false // Helmet-in Cross-Origin-Resource-Policy başlığını deaktiv edir, resursların başqa domenlərdən istifadə olunmasına imkan verir
 })); 
